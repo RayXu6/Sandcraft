@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+<meta charset="utf-8">
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+
+<style>
+    html, body {
+    position: relative;
+    height: 100%;
+    }
+    body {
+    background: rgb(230, 221, 221);
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+    }
+    .swiper-container {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+	/* .swiper-wrapper{
+	transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+		} */
+    .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+      /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    }
+</style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./imgs/4.png"></div>
+        <div class="swiper-slide"><img src="./imgs/5.png"></div>
+        <div class="swiper-slide"><img src="./imgs/1.png"></div>
+        <div class="swiper-slide"><img src="./imgs/2.png"></div>
+        <div class="swiper-slide"><img src="./imgs/3.png"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="./libs/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+	speed: 2000,
+    autoplay:true,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    effect: 'flip'
+    });
+</script>
+</body>
+</html>
