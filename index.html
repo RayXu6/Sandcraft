@@ -7,8 +7,12 @@
     <title>SandCraft</title>
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
     <script src="./libs/jQuery.min.js"></script>
+    <script src="libs/ityped.min.js"></script>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
     <script src="./libs/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="libs/font_cqbiizu5og9/iconfont.css">
+    <script src="libs/fullpage.min.js"></script>
+    <link rel="stylesheet" href="libs/fullpage.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -16,13 +20,14 @@
     <nav class="navbar navbar-fixed-top navbar-myself computer-nav">
         <div class="container container-nav">
             <a href="#" class="navbar-brand">Sandcraft</a>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav nav-ul">
                 <li class="active li1"><a href="#">简介</a></li>
                 <li class="li2"><a href="#">图片</a></li>
                 <li class="li3"><a href="#">视频</a></li>
-                <li class="li4"><a href="#">荣誉墙</a></li>
+                <li class="li4"><a href="#">玩家墙</a></li>
                 <li class="li5"><a href="#">赞助</a></li>
             </ul>
+            <div class="indicator"></div>
             <a href="https://jq.qq.com/?_wv=1027&k=bYiyMK6x" class="btn navbar-btn btn-primary">加入我们</a>
         </div>
         </nav>
@@ -36,10 +41,31 @@
             <a href="https://jq.qq.com/?_wv=1027&k=bYiyMK6x" class="btn navbar-btn btn-primary">加入我们</a>
         </ul>
     </div>
-    <div class="container mian">
+    <div class="mian">
         <div class="li1-nr">
             <img src="imgs/sandcraft.png" class="sandcraft-logo">
-            <p class="sc-intro">Sandcraft,一个Minecraft公益生存服务器，目前，我们的版本为1.16.5</p>
+            <div class="intro">
+            <span class="sc-intro" id="ityped"></span>
+        </div>
+            <div class="demo" style="min-height:350px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-effect">
+                                <span>S</span>
+                                <span>a</span>
+                                <span>n</span>
+                                <span>d</span>
+                                <span>c</span>
+                                <span>r</span>
+                                <span>a</span>
+                                <span>f</span>
+                                <span>t</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="li2-nr">
             <iframe src="./images.html" scrolling="no" frameborder="0" class="images"></iframe>
@@ -49,11 +75,117 @@
             <iframe class="video2" src="//player.bilibili.com/player.html?aid=890401532&bvid=BV1TP4y1Y7st&cid=406908019&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
             <iframe class="video3" src="//player.bilibili.com/player.html?aid=978178000&bvid=BV1m44y157KT&cid=483896392&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
         </div>
-        <div class="li4-nr">
+        <div class="li4-nr container">
+            <div class="row">
+                <div class="col-sm-2 ry">
+                    <ul class="ry-ul" id="menu">
+                        <li class="ry-li" data-menuanchor="page2"><a href="#page2" class="ry-a ">KroidYang</a></li>
+                        <li class="ry-li" data-menuanchor="page3"><a href="#page3" class="ry-a ">RayXu6</a></li>
+                        <li class="ry-li" data-menuanchor="page4"><a href="#page4" class="ry-a ">Percival</a></li>
+                        <li class="ry-li" data-menuanchor="page5"><a href="#page5" class="ry-a ">luolita</a></li>
+                        <li class="ry-li" data-menuanchor="page6"><a href="#page6" class="ry-a ">XUNNNAQAQ</a></li>
+                        <li class="ry-li" data-menuanchor="page7"><a href="#page7" class="ry-a ">Xrsry</a></li>
+                        <li class="ry-li" data-menuanchor="page8"><a href="#page8" class="ry-a ">Evli</a></li>
+                        <li class="ry-li" data-menuanchor="page9"><a href="#page9" class="ry-a ">Da_Xiong</a></li>
+                        <li class="ry-li" data-menuanchor="page10"><a href="#page10" class="ry-a ">999666</a></li>
+                        <li class="ry-li" data-menuanchor="page11"><a href="#page11" class="ry-a ">Small_hang</a></li>
+                        <li class="ry-li" data-menuanchor="page12"><a href="#page12" class="ry-a ">www312</a></li>
+                        <li class="ry-li" data-menuanchor="page13"><a href="#page13" class="ry-a ">Style123</a></li>
+                        <li class="ry-li" data-menuanchor="page14"><a href="#page14" class="ry-a ">Sapnap</a></li>
+                        <li class="ry-li" data-menuanchor="page15"><a href="#page15" class="ry-a ">beyond</a></li>
+                        <li class="ry-li" data-menuanchor="page16"><a href="#page16" class="ry-a "><s>sgw</s></a></li>
+                    </ul>
+            </div>
+            <div class="col-sm-10">
+                <div id="fullpage">
+                    <div class="section players">
+                        <h1>比较活跃的以及一些有档案的玩家，都是腐竹sgw的评价</h1>
+                        <svg t="1642651040268" class="icon-xjt" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1170" width="200" height="200"><path d="M517.688889 796.444444c-45.511111 0-85.333333-17.066667-119.466667-51.2L73.955556 381.155556c-22.755556-22.755556-17.066667-56.888889 5.688888-79.644445 22.755556-22.755556 56.888889-17.066667 79.644445 5.688889l329.955555 364.088889c5.688889 5.688889 17.066667 11.377778 28.444445 11.377778s22.755556-5.688889 34.133333-17.066667l312.888889-364.088889c22.755556-22.755556 56.888889-28.444444 79.644445-5.688889 22.755556 22.755556 28.444444 56.888889 5.688888 79.644445L637.155556 739.555556c-28.444444 39.822222-68.266667 56.888889-119.466667 56.888888 5.688889 0 0 0 0 0z" p-id="1171"></path></svg>
+                    </div>
+                    <div class="section KroidYang ">
+                        <h1>KroidYang</h1>
+                        <p>生存，红石高手，在服务器困难时赞助支持过服务器，记忆犹新。 二周年屠龙勇士，龙蛋主人</p>
+                    </div>
+                    <div class="section RayXu6">
+                        <h1>RayXu6</h1>
+                        <p>小茶馆认识的技术大佬，帮了sgw很多忙，很感谢他,同时也是个生存高手</p>
+                    </div>
+                    <div class="section Percival">
+                        <h1>Percival</h1>
+                        <p>Sgw的高中同学，建筑高手，是服务器内建筑作品最多，质量最好的玩家，第一富豪,还是个lol高手</p>
+                    </div>
+                    <div class="section luolita">
+                        <h1>luolita</h1>
+                        <p>Sgw的老朋友，一周目海岛元老玩家，土豆群管理，带sgw入坑荣耀战魂的老大哥</p>
+                    </div>
+                    <div class="section XUNNNAQAQ">
+                        <h1>XUNNNAQAQ</h1>
+                        <p>同样是sgw的老朋友，在服务器的每个时期都有来玩过，当过服务器op，在2021年的7月活动中加入了不少彩蛋，也是一个摔♂跤♂手</p>
+                    </div>
+                    <div class="section Xrsry">
+                        <h1>Xrsry</h1>
+                        <p>在21年的暑假认识，同样是一个生存，以及红石机器，生电的高手，在服务器困难时期资助过服务器，感激不尽</p>
+                        
+                    </div>
+                    <div class="section Evli">
+                        <h1>Evli</h1>
+                        <p>红石，生电大佬，也是老玩家了</p>
+                        
+                    </div>
+                    <div class="section Da_Xiong">
+                        <h1>Da_Xiong</h1>
+                        <p>一个PVP玩家，技艺精湛。参加过2021年7月份的pvp活动并三连胜</p>
+                        
+                    </div>
+                    <div class="section 999666">
+                        <h1>999666</h1>
+                        <p>在生存都市认识的生存玩家，PVP，生存，建筑都会一点</p>
+                        
+                    </div>
+                    <div class="section Small_hang">
+                        <h1>Small_hang</h1>
+                        <p>林中小镇的生存玩家，2020年的玩家，撸猫所主人</p>
+                        
+                    </div>
+                    <div class="section www312">
+                        <h1>www312</h1>
+                        <p>Sgw的好朋友，一起在浮岛做过建筑，皮的不谈~</p>
+                        
+                    </div>
+                    <div class="section Style123">
+                        <h1>Style123</h1>
+                        <p>Sgw 的高中同学，生存高手，style农场的主人，成就达人</p>
+                        
+                    </div>
+                    <div class="section Sapnap">
+                        <h1>Sapnap</h1>
+                        <p>Dream的粉丝，是个PVP型玩家，也参与过服务器的活动，活跃，但不那么活跃</p>
+                        
+                    </div>
+                    <div class="section beyond">
+                        <h1>beyond</h1>
+                        <p>白芒，sgw在0.13服务器群的朋友，手机玩家</p>
+                        
+                    </div>
+                    <div class="section sgw">
+                        <h1>sgw</h1>
+                        <p class="warning">!WARNING!本段介绍由RayXu6添加(小声)</p>
+                        <p>Sandcraft | 沙世界的腐竹，经典<s>权限狗[doge]</s>好腐竹</p>
+                        
+                    </div>
+                    </div>
+            </div>
+            </div>
         </div>
         <div class="li5-nr">
+            <div class="zz-sgw"></div>
+            <h1 class="sgwh1">为腐竹sgw赞助(微信)</h1>
+            <img src="imgs/zz-sgw.png">
+            <div class="zz-rayxu6"></div>
+            <h1 class="rayxu6h1">为网页开发者RayXu6赞助</h1>
+            <a href="https://afdian.net/@RayXu6" class="zza-rayxu6 btn btn-primary">用爱发电</a>
+
         </div>
     </div>
-
 </body>
 </html>
