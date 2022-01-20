@@ -264,7 +264,7 @@ body{
     opacity: 0.3;
     position: absolute;
     top: 200px;
-    left: 700px;
+    right: 300px;
     border-radius: 10px;
     filter: blur(20px);
     overflow: hidden;
